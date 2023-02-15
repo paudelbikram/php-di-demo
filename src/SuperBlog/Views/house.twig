@@ -1,0 +1,26 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <h1>Welcome to the Houses!</h1>
+
+    <p>Have a look at our houses:</p>
+
+    <ul class="collection">
+
+        {% for house in houses %}
+            <li class="collection-item avatar">
+
+                <i class="mdi-editor-insert-comment circle"></i>
+
+                <span class="title">{{ house.address }}</span>
+
+                <p>{{ house.year }}</p>
+                <p>{{ house.price }}</p>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+    <hr/>
+{% endblock %}
